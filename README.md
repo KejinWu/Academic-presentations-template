@@ -8,9 +8,12 @@ There are two key files:
 
 For your purpose, you can download these two files to Overleaf or your local computer, and make changes to deploy your presentations.
 
-For the .bib file, it contains the BibTex information of the reference paper.
+For the references.bib file, it contains the BibTex information of the reference paper.
 
 ## Modification
 
 To modify the current format, you can view the elegant.sty file and define your command or style. 
 
+## Preview
+
+See Example.pdf file to view the template.
