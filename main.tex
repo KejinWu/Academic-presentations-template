@@ -1,0 +1,193 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+\documentclass[aspectratio=169,xcolor=x11names]{beamer}
+\usepackage{elegant}
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{An Elegant Beamer Theme}} % The short title appears at the bottom of every slide, the full title is only on the title page
+\subtitle{maybe elegant}
+
+\author{Kejin Wu}
+
+\institute[] 
+{
+    Department of Mathematics \\
+    University of California, San Diego % Your institution for the title page
+}
+\date{\today} % Date, can be changed to a custom date
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{frame}
+    % Print the title page as the first slide
+    \titlepage
+\end{frame}
+
+\begin{frame}{Overview}
+    % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+    \tableofcontents
+\end{frame}
+
+%------------------------------------------------
+\section{Section I}
+%------------------------------------------------
+
+\begin{frame}{Bullet Points}
+    \begin{itemize}
+        \item Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        \item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus eu
+        \item Nulla commodo, erat quis gravida posuere, elit lacus lobortis est, quis porttitor odio mauris
+        \begin{itemize}
+        \item Xarbit wovlin jaxter blorquix, zumpit terfel yandro fimper.
+        \item Flumple jarnit krivlox gendro, vompix trelur zyndro kifmat.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Blocks}
+\bigskip 
+
+    \begin{block}{\textbf{Theorem:} Lorem ipsum dolor sit amet}
+        Nam cursus est eget velit posuere pellentesque. Klornix tarpel yundiv prozle, vixmar gonqet lumfry wexter. Viflar skondit jarpix brexel, loxmid junder plorfid wemzle. 
+$$
+   \sup_{|x|\leq c_T}\left|F_{X^*_{T+k}|X_{T},\ldots, X_{0}}(x) - F_{X_{T+k}|X_{T}}(x)\right|\overset{p}{\to} 0.   
+$$
+    \end{block}
+
+    \begin{alertblock}{\textbf{Definition:} Aliquam blandit faucibus nisi}
+        Nam cursus est eget velit posuere pellentesque
+    \end{alertblock}
+
+    \begin{example}
+        Nam cursus est eget velit posuere pellentesque
+    \end{example}
+\end{frame}
+
+
+
+%------------------------------------------------
+\section{Section II}
+%------------------------------------------------
+
+
+\begin{frame}{Table}
+
+\cref{Table:example} summarized below:
+    \begin{table}
+        \begin{tabular}{lll}
+            \toprule
+            \textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2} \\
+            \midrule
+            Treatment 1         & 0.0003262           & 0.562               \\
+            Treatment 2         & 0.0015681           & 0.910               \\
+            Treatment 3         & 0.0009271           & 0.296               \\
+            \bottomrule
+        \end{tabular}
+        \caption{Table caption \label{Table:example}}  
+    \end{table}
+\end{frame}
+
+
+\begin{frame}{Formulas}
+
+\cref{Eq:example} presented below:
+\begin{equation}\label{Eq:example}
+         \sqrt{T}(\widehat{\theta}^*_1 - \widehat{\theta}_1) \overset{d}{\to} N(0,B_1^{-1}\Omega_1 B_1^{-1})~;~\sqrt{T}(\widehat{\theta}^*_2 - \widehat{\theta}_2) \overset{d}{\to} N(0,B_2^{-1}\Omega_2 B_2^{-1}).
+\end{equation}
+
+
+\end{frame}
+
+
+%------------------------------------------------
+
+\begin{frame}{Figure}
+Logo of UCSD shown in \cref{Fig:example}:
+    \begin{figure}
+    \includegraphics[scale = 0.05]{UCSD-Symbol.png}
+    \caption{Figure caption \label{Fig:example}}  
+    \end{figure}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Multiple Columns}
+    \begin{columns}[c] % The [c] option specifies centered vertical alignment while the [t] option is used for top vertical alignment; [b] aligns the contents of each column at the bottom
+
+        \column{.45\textwidth} % Left column and width
+        \textbf{Heading}
+        \begin{enumerate}
+            \item Statement
+            \item Explanation
+            \item Formula:
+            $$
+            \sup_{B}|\Pi(B) -\Pi^*(B)| = o(1)
+            $$
+        \end{enumerate}
+
+        \column{.6\textwidth} % Right column and width
+        Lorem splim ipsum dolor sit amet, flibble adipiscing elit. Crinkle dapibus ploozle ante, nec boing tristique mauris placerat. Nulla vulputate semper nisl, et pulvinar glorp ante sagittis nec. Vestibulum a bibendum ligula. Quisque dapibus, sem in fringilla egestas, turpis ipsum trumple eros, nec zonk flibberish nunc turpis id purus.
+
+    \end{columns}
+\end{frame}
+
+\begin{frame}[fragile] 
+    \frametitle{Citation}
+
+    For example, \cite{politis2015model} introduced an interesting model-free prediction method.
+\end{frame}
+
+
+%------------------------------------------------
+
+\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+    \frametitle{Special context}
+\begin{verbatim}
+import torch
+class Data(Dataset):
+    def __init__(self, X, y):
+        self.X = torch.from_numpy(X.astype(np.float32))
+        self.y = torch.from_numpy(y.astype(np.float32))
+        self.len = self.X.shape[0]
+       
+    def __getitem__(self, index):
+        return self.X[index], self.y[index]
+   
+    def __len__(self):
+        return self.len
+\end{verbatim}
+\end{frame}
+
+\begin{frame}
+\color{RoyalBlue4}
+    \Huge{\centerline{\textbf{Thank you!}}}
+\end{frame}
+
+%------------------------------------------------
+
+\section*{References}
+\footnotesize
+\begin{frame}{References}
+        \bibliographystyle{apalike}
+        \bibliography{references.bib}
+\end{frame}
+
+
+
+%----------------------------------------------------------------------------------------
+
+
+
+\end{document}

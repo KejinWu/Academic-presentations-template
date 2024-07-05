@@ -1,0 +1,47 @@
+\usepackage{hyperref}
+\hypersetup{colorlinks,linkcolor={black},citecolor={black},urlcolor={black}}  
+\usepackage[nameinlink,capitalise]{cleveref}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{natbib} % Make the referebce item to be simple
+\usefonttheme{professionalfonts}
+\usefonttheme{serif} % default family is serif
+\usepackage{txfonts}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+
+\captionsetup{
+    font={color=black},  % Set caption font color
+    labelfont={color=RoyalBlue4},  % Set caption label (e.g., Figure 1) font color
+}
+
+\newcommand{\thickhrulefill}{\leavevmode\leaders\hrule height 1pt\hfill\kern\z@} % Define a newcommand that will be used to be the underline for frame title; 1pt controls the thickness of the underline
+
+\setbeamertemplate{blocks}[rounded][shadow=true] % Set the shape of different blocks. A simple rounded and shadowed one is used
+\setbeamertemplate{caption}[numbered] % Make captions to be numbered
+\setbeamertemplate{frametitle}{\vspace*{-0.05cm}\bfseries\insertframetitle\par\vskip-8pt\thickhrulefill\vspace{-1cm}} % Add a horizontal line under the frame title; -0.05cm controls the distance between frame title and the up boundary of the page; \vskip-8pt controls the distance between the horizontal line and the bottom of the frame title; \hrulefill\vspace{-1.5cm} controls the distance between the first line of the mian text on this page and the horizontal line
+
+\setbeamertemplate{footline}[frame number] % Add the page number to the right-bottom of each page
+\setbeamertemplate{navigation symbols}{} % Remove the navigation bar
+\setbeamertemplate{itemize item}{\color{RoyalBlue4}$\bullet$} % Set the shape and color of item in the itemize environment
+\setbeamertemplate{itemize subitem}{\color{RoyalBlue4}-} % Set the shape and color of subitem in the itemize environment
+
+\addtobeamertemplate{block example begin}{%
+    \let\oldinsertblocktitle\insertblocktitle%
+    \def\insertblocktitle{\textbf{\oldinsertblocktitle :}}%
+}{}
+
+\setbeamercolor{title}{fg=RoyalBlue4} % Set the color for the title on the title page
+\setbeamercolor{normal text}{fg=black} % Set the color of the main text
+\setbeamercolor{frametitle}{fg=RoyalBlue4} % Set the color of the frame title
+
+%%%% We can set the color of the title of different types of blocks %%%%
+\setbeamercolor{block title}{ bg = , fg = SteelBlue4}       % For Theorem blocks
+\setbeamercolor{block title alerted}{bg=,fg=SteelBlue4}     % For Definition blocks
+\setbeamercolor{block title example}{bg=,fg=SteelBlue4}     % For Example blocks
+
+
+
+% \newcommand\dunderline[3][-1pt]{{%
+%   \sbox0{#3}%
+%   \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
