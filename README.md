@@ -14,4 +14,3 @@ For the .bib file, it contains the BibTex information of the reference paper.
 
 To modify the current format, you can view the elegant.sty file and define your command or style. 
 
-Test
