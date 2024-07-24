@@ -42,6 +42,32 @@
 
 
 
+%%%%
+\newcommand{\backupbegin}{
+   \newcounter{framenumberappendix}
+   \setcounter{framenumberappendix}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \addtocounter{framenumberappendix}{-\value{framenumber}}
+   \addtocounter{framenumber}{\value{framenumberappendix}} 
+}
+%%%% These above two new commands are used to count the backup slides page so that we can get something like 60/52. 
+
+%%%%%%
+\let\oldfootnote\footnote
+\renewcommand{\footnote}{\only<+->\oldfootnote}
+
+\let\oldfootnotetext\footnotetext
+\renewcommand{\footnotetext}{\only<+->\oldfootnotetext}
+%%%%%%
+% Above command make the footnote appears only after the click for pause
+
+\setbeamertemplate{frametitle continuation}{} % Remove the roman numbering of allowframebreaks in the reference sections
+
+\addtobeamertemplate{frametitle}{\vspace*{-0.1cm}}{\vspace*{0.75cm}} %
+
+
+
 % \newcommand\dunderline[3][-1pt]{{%
 %   \sbox0{#3}%
 %   \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
